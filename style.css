@@ -1,0 +1,381 @@
+/* Reset */
+html {
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  --color-primary: #238d23;
+  --background-primary: whitesmoke;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-size: 10px;
+}
+
+body {
+  background-color: var(--background-primary);
+}
+
+/* Általános osztályok */
+.d-none {
+  display: none;
+}
+
+/* Komponensek */
+.btn {
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  border: none;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+.btn:hover,
+.btn:active {
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+.btn-transparent {
+  color: var(--color-primary);
+  background-color: var(--background-primary);
+}
+.btn-full {
+  color: whitesmoke;
+  background-color: var(--color-primary);
+}
+
+.btn-icon-background {
+  background-color: var(--background-primary);
+  border-radius: 50%;
+  width: 1.6rem;
+  height: 1.6rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+.btn-icon {
+  height: 1.6rem;
+  vertical-align: middle;
+}
+
+.btn-icon-background > .btn-icon {
+  margin: 0.2rem 0;
+  height: 1.2rem;
+}
+
+/*header stílus */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 2rem 1.5rem;
+}
+
+.header-nav-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-menu {
+  display: flex;
+  list-style-type: none;
+}
+
+.logo-text {
+  font-size: 2.4rem;
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.header-li__link {
+  font-size: 1.6rem;
+  color: black;
+  margin-left: 2rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.header-li__link:hover,
+.header-li__link:active {
+  text-decoration: underline;
+}
+
+/* Carouser */
+.carousel {
+  height: 500px;
+}
+.carousel-kép {
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+.carousel-kép-1 {
+  background-image: url(./assets/Yoga-team.jpg);
+}
+
+.carousel-kép-2 {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.25),
+      rgba(255, 255, 255, 0)
+    ),
+    url(./assets/yoga-shop.jpg);
+}
+.carousel-title {
+  font-size: 4.8rem;
+  padding-top: 5rem;
+  text-align: center;
+  color: black;
+  text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.9);
+}
+
+/* Jóga órák */
+.classes {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5rem 0;
+}
+.yoga-class-card {
+  width: 28%;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.35);
+  display: grid;
+  grid-template-areas:
+    "img"
+    "title"
+    "p"
+    "badges";
+}
+
+.yoga-class-card__title {
+  grid-area: title;
+  margin: 2rem 0 0.5rem 2rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.yoga-class-card__img {
+  max-width: 100%;
+  grid-area: img;
+}
+.yoga-class-card__p {
+  grid-area: p;
+  margin: 0.5rem 0 1rem 2rem;
+}
+.yoga-class-card__badges {
+  grid-area: badges;
+  margin: 0.5rem 2rem 2rem;
+}
+
+.yoga-class-card__badges .badge {
+  background-color: var(--color-primary);
+  padding: 0.3rem;
+  border-radius: 0.25rem;
+  color: whitesmoke;
+  font-weight: 500;
+  text-shadow: 1px 1px 1px rgb(0 0 0 / 40%);
+}
+/* Register */
+.register-cta-container {
+  min-height: 300px;
+  display: flex;
+}
+.register-text-container {
+  width: 50%;
+}
+.register-image {
+  width: 44%;
+  margin: 0 3%;
+  background-image: url(./assets/yoga-class.jpg);
+  background-position: center center;
+  background-size: cover;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 50);
+}
+
+.register__heading,
+.berletek__heading {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 500;
+}
+.register__p {
+  margin: 1rem 2rem;
+  font-size: 1.2rem;
+}
+.register__button {
+  margin: 1rem 2rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  background-color: var(--color-primary);
+  color: var(--background-primary);
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+  border: none;
+  cursor: pointer;
+}
+
+.register__button:hover {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Bérletek */
+.bérletek {
+  background-color: var(--color-primary);
+  margin: 3rem 0;
+  padding: 2rem;
+}
+.berletek__heading {
+  color: var(--background-primary);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+.berlet-container {
+  display: flex;
+  justify-content: center;
+}
+.berlet-card {
+  background-color: var(--background-primary);
+  margin: 2.5rem;
+  padding: 1.5rem;
+  border-radius: 1.3rem;
+}
+
+.berlet-heading {
+  font-size: 2.4rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-align: center;
+  border: 4px solid var(--color-primary);
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+}
+
+.berlet-ar-tag {
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem;
+  display: block;
+}
+
+.berlet-features {
+  list-style: none;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+}
+.berlet-features > li {
+  line-height: 2.4rem;
+}
+.berlet-features > li::before {
+  content: "✔";
+  font-weight: 800;
+  margin: 0 1rem 0 0;
+  color: var(--color-primary);
+  font-size: 1.6rem;
+}
+
+.berletek__button {
+  font-size: 2rem;
+  color: var(--background-primary);
+  background-color: var(--color-primary);
+  font-weight: 500;
+  padding: 1rem 3rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  border: none;
+  border-radius: 0.8rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  display: block;
+  margin: 1rem auto;
+}
+
+.berletek__button:hover {
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Blog */
+.blog {
+  display: flex;
+  margin: 2rem;
+}
+.blog-thumbnail {
+  margin: 1.5rem;
+  display: grid;
+  grid-template-areas: "thumbnail-image thumbnail-content";
+
+  background-color: white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.blog-thumbnail__content > h2 {
+  padding-top: 1rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+.blog-thumbnail__content > p {
+  padding: 0.5rem 0;
+}
+.blog-thumbnail > time {
+  position: absolute;
+  bottom: 0;
+  left: 15vw;
+  left: calc(14vw + 1rem);
+  width: 14vw;
+  padding: 2rem 0 1rem 0;
+  background-image: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+.blog-thumbnail__image {
+  background-image: url(./assets/yoga-class.jpg);
+  background-position: center center;
+  background-size: cover;
+  width: 14vw;
+  height: 14vw;
+  margin-right: 1rem;
+  grid-area: thumbnail-image;
+}
+.blog-thumbnail__content {
+  grid-area: thumbnail-content;
+  width: 14vw;
+  height: 14vw;
+
+  overflow: hidden;
+}
+/* Footer */
+footer {
+  border-top: 0.5rem var(--color-primary) solid;
+  padding-top: 2rem;
+}
+.footer__links {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+.footer__link {
+  margin: 2rem;
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+}
+.footer__copyright {
+  display: block;
+  margin: 1rem;
+  text-align: center;
+}
+
+/* Media query-k */
+
+/*Ideiglenes stílus */
+img {
+  max-width: 100%;
+}
